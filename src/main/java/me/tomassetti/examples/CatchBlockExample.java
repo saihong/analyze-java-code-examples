@@ -1,7 +1,6 @@
 package me.tomassetti.examples;
 
 import com.github.javaparser.JavaParser;
-import com.github.javaparser.ParseException;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.stmt.Statement;
 import com.google.common.base.Strings;
@@ -11,7 +10,7 @@ import me.tomassetti.support.NodeIterator;
 import java.io.File;
 import java.io.IOException;
 
-public class StatementsLinesExample {
+public class CatchBlockExample {
 
     public static void statementsByLine(File projectDir) {
         new DirExplorer((level, path, file) -> path.endsWith(".java"), (level, path, file) -> {
@@ -38,7 +37,7 @@ public class StatementsLinesExample {
     }
 
     public static void main(String[] args) {
-        File projectDir = new File("D:\\erpHome\\lm\\lm\\src\\com\\icsc\\lm\\logic");
+        File projectDir = new File("D:\\research\\analyze-java-code-examples\\examples\\oft\\src\\com\\icsc\\of\\oft\\di");
         statementsByLine(projectDir);
     }
 }
